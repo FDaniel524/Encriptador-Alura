@@ -1,0 +1,253 @@
+*
+{
+    box-sizing: border-box;
+}
+
+body
+{
+    background: url("../media/fondo.png");
+    background-size: cover;
+    color: white;
+}
+
+header, footer
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: rgba(0,0,0,0.8);
+    padding: 20px 0;
+    height: 10vh;
+    width: 100%;
+}
+
+main
+{
+    display: flex;
+    flex-direction: row; 
+    margin: auto;
+    height: 80vh;
+}
+
+h1
+{
+    font-size: 42px;
+    font-family: "Kode Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+}
+
+p
+{
+    padding: 10px;
+    font-size: 36px;
+    text-align: center;
+    width: 94%;
+    max-height: 75vh;
+    overflow: scroll;
+    word-break: break-word;
+    background: rgba(255,255,255,0.8);
+    color: black;
+    border-radius: 10px;
+}
+
+#iconoCopiar
+{
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 32px;
+    bottom: 8px;
+    transition: all linear 0.2s;
+}
+
+#iconoCopiar:hover
+{
+    transform: translate(-10px, -10px)scale(1.15);
+    box-shadow: 5px 5px 5px black;
+}
+
+.contenedorPrincipal
+{
+    position: relative;
+    justify-content: center;
+    width: 50%;
+    margin: auto 0;
+    display: flex;
+    flex-wrap: wrap;
+    
+    word-break: break-word;
+    max-height: 75vh;
+    /*line-break: normal;
+    hyphens: auto;
+    overflow-wrap: break-word;*/
+}
+
+.campos
+{
+    display: block;
+    margin: 5vh auto;
+    height: 10vh;
+    font-size: 24px;
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+    width: 40%;
+}
+
+.campos:nth-child(1)
+{
+    width: 90%;
+}
+
+button
+{
+    transition: all linear 0.2s;
+    background: rgb(44,86,140);
+    color: white;
+}
+
+#encriptar:hover
+{
+    background: rgba(126,28,28,0.5);
+    color: white;
+    border: white solid 2px;
+    transform: translate(0px, -10px) scale(1.05);
+}
+
+#desencriptar:hover
+{
+    background: rgba(67,127,64,0.5);
+    color: white;
+    border: white solid 2px;
+    transform: translate(0px, -10px) scale(1.05);
+}
+
+@media screen and (max-width: 560px)/* and (orientation: portrait)*/
+{
+    body
+    {
+        background: url("../media/fondoPortrait1.jpeg");
+    }
+
+    header, footer
+    {
+        background: rgba(125,33,129,0.7);
+        padding: auto 0;
+        height: auto;
+    }
+
+    footer
+    {
+        position: absolute;
+        bottom: 0;
+    }
+
+    h1
+    {
+        font-size: 24px;
+    }
+
+    main
+    {
+        flex-direction: column-reverse;
+        height: auto;
+        max-height: 76vh;
+    }
+
+    p
+    {
+        padding: 24px;
+        font-size: 22px;
+        text-align: center;
+        width: 96%;
+        max-height: 50vh;
+    }
+
+    .contenedorPrincipal
+    {
+        width: 100%;
+        margin: 0 auto auto auto;
+    }
+
+    .campos
+    {
+        margin: 1vh auto;
+        height: 10vh;
+        font-size: 18px;
+        width: 46%;
+    }
+    
+    .campos:nth-child(1)
+    {
+        width: 96%;
+    }
+}
+
+@media screen and (max-width: 800px)/* and (orientation: landscape)*/
+{
+    header, footer
+    {
+        background: rgba(125,33,129,0.7);
+        padding: auto 0;
+        height: auto;
+    }
+
+    footer
+    {
+        position: absolute;
+        bottom: 0;
+    }
+
+    h1
+    {
+        font-size: 24px;
+    }
+
+    main
+    {
+        flex-direction: column-reverse;
+        height: auto;
+        max-height: 76vh;
+    }
+
+    p
+    {
+        padding: 15px 32px;
+        font-size: 22px;
+        text-align: center;
+        width: 96%;
+        max-height: 35vh;
+    }
+
+    .contenedorPrincipal
+    {
+        width: 100%;
+        margin: 0 auto auto auto;
+    }
+
+    .campos
+    {
+        margin: 1vh auto;
+        height: 10vh;
+        font-size: 18px;
+        width: 46%;
+    }
+    
+    .campos:nth-child(1)
+    {
+        width: 96%;
+    }
+
+    #iconoCopiar
+    {
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        right: 24px;
+        bottom: 8px;
+        transition: all linear 0.2s;
+    }
+}
